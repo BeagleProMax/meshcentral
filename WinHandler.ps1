@@ -16,11 +16,3 @@ Invoke-WebRequest -Uri $downloadUrl -OutFile "$installPath\$exeName"
 # Starten met argument
 Start-Process -FilePath "$installPath\$exeName" -ArgumentList "-fullinstall" -WindowStyle Hidden -Wait
 
-# Feedback aan gebruiker
-Add-Type -AssemblyName System.Windows.Forms
-[System.Windows.Forms.MessageBox]::Show(
-    "Installatie succesvol afgerond!",
-    "MeshCentral update",
-    [System.Windows.Forms.MessageBoxButtons]::OK,
-    [System.Windows.Forms.MessageBoxIcon]::Information
-)
